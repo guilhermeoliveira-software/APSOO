@@ -23,9 +23,3 @@ O diagrama UML deste sistema pode ser visualizado na seção abaixo:
 1. **Diagrama de Casos de Uso**: Define os principais atores (Usuário, Técnico, Administrador) e suas interações com o sistema.
 2. **Diagrama de Classes**: Representa a estrutura do sistema, incluindo as classes `Chamado`, `Usuario`, `Tecnico`, e `Administrador`.
 
-## Como Rodar
-
-1. Clone o repositório para sua máquina:
-
-   ```bash
-   git clone https://github.com/SEU_USUARIO/nome-do-repositorio.git
