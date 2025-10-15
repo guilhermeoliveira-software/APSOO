@@ -54,6 +54,7 @@ input, select, textarea {
 }
 
 button {
+    transition: background-color 0.3s ease;
     background-color: #007BFF;
     color: #fff;
     padding: 10px;
