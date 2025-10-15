@@ -1,4 +1,4 @@
-// Quando o formulário é enviado
+
 document.getElementById("ticketForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -18,7 +18,7 @@ document.getElementById("ticketForm").addEventListener("submit", function (event
         status: 'Pendente',
     };
 
-    // Salva no localStorage
+   
     const tickets = JSON.parse(localStorage.getItem("tickets")) || [];
     tickets.push(ticket);
     localStorage.setItem("tickets", JSON.stringify(tickets));
@@ -27,7 +27,7 @@ document.getElementById("ticketForm").addEventListener("submit", function (event
     clearForm();
 });
 
-// Adiciona um chamado à tabela
+
 function addTicketToTable(ticket) {
     const tableBody = document.getElementById("ticketTable").getElementsByTagName("tbody")[0];
     const row = tableBody.insertRow();
@@ -44,7 +44,7 @@ function addTicketToTable(ticket) {
     `;
 }
 
-// Atualiza o status de um chamado
+
 function updateStatus(id, newStatus) {
     const tickets = JSON.parse(localStorage.getItem("tickets")) || [];
     const index = tickets.findIndex(t => t.id === id);
@@ -55,7 +55,7 @@ function updateStatus(id, newStatus) {
     }
 }
 
-// Exclui um chamado
+
 function deleteTicket(id) {
     const tickets = JSON.parse(localStorage.getItem("tickets")) || [];
     const updatedTickets = tickets.filter(t => t.id !== id);
@@ -63,12 +63,12 @@ function deleteTicket(id) {
     loadTickets();
 }
 
-// Limpa o formulário
+
 function clearForm() {
     document.getElementById("ticketForm").reset();
 }
 
-// Carrega os chamados existentes ao abrir a página
+
 function loadTickets() {
     const tickets = JSON.parse(localStorage.getItem("tickets")) || [];
     const tableBody = document.getElementById("ticketTable").getElementsByTagName("tbody")[0];
@@ -76,5 +76,5 @@ function loadTickets() {
     tickets.forEach(ticket => addTicketToTable(ticket));
 }
 
-// Executa quando a página é carregada
+
 window.onload = loadTickets;
