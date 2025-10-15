@@ -15,6 +15,7 @@ Este projeto é um sistema simples de monitoramento de chamados técnicos desenv
 - **HTML**: Estrutura da página e formulários.
 - **CSS**: Estilo básico para a interface.
 - **JavaScript**: Lógica para interações com o sistema, manipulação de dados e persistência no **localStorage**.
+- **IDE**: Visual Studio Code.
 
 ## Diagrama UML
 
