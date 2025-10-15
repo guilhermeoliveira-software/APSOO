@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Monitoramento de Chamados de TI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Sistema de Monitoramento de Chamados de TI</h1>
+        </header>
+
+        <div class="form-container">
+            <h2>Abertura de Chamado</h2>
+            <form id="ticketForm">
+                <label for="title">Título:</label>
+                <input type="text" id="title" required>
+
+                <label for="priority">Prioridade:</label>
+                <select id="priority" required>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+
+                <label for="category">Categoria:</label>
+                <select id="category" required>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                    <option value="Rede">Rede</option>
+                </select>
+
+                <label for="technician">Técnico Responsável:</label>
+                <input type="text" id="technician" required>
+
+                <label for="description">Descrição:</label>
+                <textarea id="description" rows="4" required></textarea>
+
+                <button type="submit">Abrir Chamado</button>
+            </form>
+        </div>
+
+        <div class="ticket-list">
+            <h2>Chamados Abertos</h2>
+            <table id="ticketTable">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Prioridade</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Chamados serão exibidos aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
