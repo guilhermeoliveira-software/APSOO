@@ -5,83 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 </style>
 
-<style>
-
-    #raiz{
-        height: 1300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: greenyellow;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-size: 20px;
-        text-align: center;
-        overflow: hidden;
-        font-family: "Archivo", sans-serif;
-        font-optical-sizing: auto;
-    }
-
-    #forms{
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        align-items:center;
-        justify-content: center;
-        text-align: justify;
-        height: 100%;
-        background-color: #f0f0f0;
-        padding: 20px;
-        box-sizing: border-box;
-        font-family: "Archivo", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
-    }
-
-    form{
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 500px;
-        box-sizing: border-box;
-        font-family: "Archivo", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
-    }
-
-    section{
-        gap: 50px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 100%;
-        background-color: #f0f0f0;
-        padding: 20px;
-    }
-
-    h1{
-        font-family: "Roboto", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-variation-settings:
-            "wdth" 100;
-    }
-
-</style>
 
 <main id="raiz">   
 
@@ -98,7 +28,7 @@
     <label for="formUserGroupExampleInput2">Senha</label>
     <input type="password" class="form-control" id="formUserGroupExampleInput2" placeholder="Digite sua Senha">
   </div>
-  <button type="button" class="btn btn-success">Entrar</button>
+  <button type="button" class="btn btn-success" id="btn-login-user">Entrar</button>
 </form>
 </div>
 
@@ -113,7 +43,7 @@
     <label for="formGroupExampleInput2">Senha</label>
     <input type="password" class="form-control" id="formAdminGroupExampleInput2" placeholder="Digite sua Senha">
   </div>
-  <button type="button" class="btn btn-success">Entrar</button>
+  <button type="button" class="btn btn-success" id="btn-login-admin">Entrar</button>
 </form>
 </div>
 
@@ -128,13 +58,44 @@
     <label for="formTecGroupExampleInput2">Senha</label>
     <input type="password" class="form-control" id="formTecGroupExampleInput2" placeholder="Digite sua Senha">
   </div>
-  <button type="button" class="btn btn-success">Entrar</button>
+  <button type="button" class="btn btn-success" id="btn-login-tec">Entrar</button>
 </form>
 </div>
 
 </section>
 
 </main>
+<script>
 
+  document.getElementById("btn-login-user").addEventListener('click', ()=>{
+
+          const loginUser = document.getElementById("formUserGroupExampleInput").value;
+          const passUser = document.getElementById("formUserGroupExampleInput2").value;
+
+          if (loginUser == "User" && passUser == "123456") {
+             window.location.href = "http://127.0.0.1:5500/user.html"
+          }
+      });
+
+  document.getElementById("btn-login-admin").addEventListener('click', ()=>{
+
+          const loginAdmin = document.getElementById("formAdminGroupExampleInput").value;
+          const passAdmin = document.getElementById("formAdminGroupExampleInput2").value;
+
+          if (loginAdmin == "Admin" && passAdmin == "123456") {
+             window.location.href = "http://127.0.0.1:5500/admin.html"
+          }
+      });
+
+  document.getElementById("btn-login-tec").addEventListener('click', ()=>{
+
+          const loginTec = document.getElementById("formTecGroupExampleInput").value;
+          const passTec = document.getElementById("formTecGroupExampleInput2").value;
+
+          if (loginTec == "Tec01" || loginTec == "Tec02" && passTec == "123456") {
+              window.location.href = "http://127.0.0.1:5500/tec.html"
+          }
+      });
+</script>
 </body>
 </html>

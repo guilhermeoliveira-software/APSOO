@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tec-Area</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body{
+        font-family: 'Roboto', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+</style>
+<body>
+    <main id="raiz">
+        <section id="forms">
+            <h1>Area do Técnico</h1>
+            <div class="ticket-list" id="chamados-list">
+            <button id="btn-show-chamados" onclick="mostrarChamados()">Mostrar Chamados</button>
+            <h2>Chamados Abertos</h2>
+            <table id="ticketTable">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Prioridade</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Chamados serão exibidos aqui -->
+                </tbody>
+            </table>
+        </div>
+        </section>
+    </main>
+
+    <script src="logica.js"></script>
+</body>
+</html>

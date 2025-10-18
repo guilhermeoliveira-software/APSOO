@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Monitoramento de Chamados de TI</title>
+    <title>Admin-area</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <body>
+    <main>
+        <h1>Area do Admin</h1>
 
-    <div class="container">
+        <section id="forms">
+            <div class="container">
         <header>
             <h1>Sistema de Monitoramento de Chamados de TI</h1>
         </header>
@@ -39,12 +46,13 @@
                 <label for="description">Descrição:</label>
                 <textarea id="description" rows="4" required></textarea>
 
-                <button type="submit">Abrir Chamado</button>
+                <button type="submit" id="btn-abrir-chamado">Abrir Chamado</button>
             </form>
         </div>
 
         <div class="ticket-list">
             <h2>Chamados Abertos</h2>
+            <button type="button" id="btn-print" onclick="gerarRelatorio()">Gerar Relatório</button>
             <table id="ticketTable">
                 <thead>
                     <tr>
@@ -62,5 +70,9 @@
     </div>
 
     <script src="logica.js"></script>
+ 
+    </section>
+    </main>
+   
 </body>
 </html>

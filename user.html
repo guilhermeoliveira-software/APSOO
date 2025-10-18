@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Area</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+<body>
+    <main id="raiz">
+        <h1>Area do Usuário</h1>
+        <section id="forms">
+            <div class="ticket-list" id="chamados-list">
+            <h2>Chamados Abertos</h2>
+            <button id="btn-show-chamados" onclick="mostrarChamados()">Mostrar Chamados</button>
+            <table id="ticketTable">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Prioridade</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Chamados serão exibidos aqui -->
+                </tbody>
+            </table>
+        </div>
+        </section>
+    </main>
+
+<script src="logica.js"></script>    
+</body>
+</html>
